@@ -7,8 +7,7 @@ start_time = datetime.datetime.now()
 
 
 def solve():
-    oxygen_generator_given_input = given_input
-    co2_scrubber_given_input = given_input
+    oxygen_generator_given_input = co2_scrubber_given_input = given_input
     bit_length = len(given_input[0])
 
     og = solve_oxygen_generator_rating(bit_length,
