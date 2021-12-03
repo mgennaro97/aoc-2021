@@ -12,7 +12,15 @@ def solve():
     print(count)
 
 
-end_time = datetime.datetime.now()
-print(end_time - start_time)
+def solve_pythonic():
+    count = 0
+    print(sum(
+        [count + 1 if element > given_input[index - 1]
+         else count + 0 for index, element in enumerate(given_input)]))
 
-solve()
+
+end_time = datetime.datetime.now()
+print("μs: " + str((end_time - start_time).microseconds))
+
+if __name__ == '__main__':
+    solve()

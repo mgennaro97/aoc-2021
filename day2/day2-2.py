@@ -6,9 +6,7 @@ start_time = datetime.datetime.now()
 
 
 def solve():
-    horizontal_position = 0
-    aim = 0
-    depth = 0
+    horizontal_position, aim, depth = 0, 0, 0
     for strings in given_input:
         direction, value = strings.split()
         if direction == "forward":
@@ -22,6 +20,7 @@ def solve():
 
 
 end_time = datetime.datetime.now()
-print(end_time - start_time)
+print("μs: " + str((end_time - start_time).microseconds))
 
-solve()
+if __name__ == '__main__':
+    solve()
