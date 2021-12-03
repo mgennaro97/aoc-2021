@@ -42,16 +42,16 @@ def solve_co2_scrubber_rating(bit_length, co2_scrubber_given_input):
         sub_list = [i[b] for i in co2_scrubber_given_input]
         if collections.Counter(sub_list).get('0') == \
                 collections.Counter(sub_list).get('1'):
-            most_uncommon = '0'
+            least_common = '0'
         else:
-            most_uncommon = \
+            least_common = \
                 min(sub_list[::-1], key=collections.Counter(sub_list).get)
         if len(co2_scrubber_given_input) == 1:
             break
         else:
             filtered_list = \
                 [element for element in co2_scrubber_given_input
-                 if element[b] == most_uncommon]
+                 if element[b] == least_common]
             co2_scrubber_given_input = filtered_list
     return ''.join(co2_scrubber_given_input)
 
