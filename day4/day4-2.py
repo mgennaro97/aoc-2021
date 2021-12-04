@@ -25,9 +25,9 @@ def solve():
                     or any(np.equal(reshaped, [-1, -1, -1, -1, -1]).all(0)):
                 if len(bingo_reshaped) > 1:
                     bingo_reshaped = [a for a, skip in
-                      zip(bingo_reshaped,
-                          [np.allclose(a, reshaped) for a in bingo_reshaped]) if
-                      not skip]
+                        zip(bingo_reshaped,
+                        [np.allclose(a, reshaped) for a in bingo_reshaped])
+                        if not skip]
                 else:
                     print(sum(reshaped[reshaped != -1]) * num)
                     return
